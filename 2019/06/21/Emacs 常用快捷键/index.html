@@ -19,7 +19,7 @@
     <meta name="description" content>
     <meta name="author" content="Side">
     <meta name="keywords" content>
-    <title>U盘图标制作 ~ Side</title>
+    <title>Side</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.2/css/all.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.7.4/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.7.4/css/mdb.min.css">
@@ -67,10 +67,10 @@
     <div class="full-bg-img">
         <div class="mask rgba-black-light flex-center">
         <div class="container text-center white-text wow fadeInUp">
-            <p class="h2">U盘图标制作</p>
+            <p class="h2"></p>
             <br>
             
-            <p>星期五, 六月 21日 2019, 1:10 下午</p>
+            <p>星期五, 六月 21日 2019, 8:01 早上</p>
             
         </div>
         </div>
@@ -84,24 +84,56 @@
     <div class="row">
         <div class="col-md-8 offset-md-2 ">
             <div class="post-content py-5 z-depth-3 main">
-                <h3 id="图片准备"><a href="#图片准备" class="headerlink" title="图片准备"></a>图片准备</h3><ul>
-<li><a href="http://www.bitbug.net/" target="_blank" rel="noopener">打开链接</a>制作ico格式的图标</li>
-<li>目标尺寸选择（我选择64*64）</li>
-</ul>
-<h3 id="配置文件准备"><a href="#配置文件准备" class="headerlink" title="配置文件准备"></a>配置文件准备</h3><ul>
-<li><p>新建一个txt文档，添加以下内容</p>
-<pre><code>[autorun]
-ICON=favicon.ico,0</code></pre><p>favicon是图片名</p>
-</li>
-<li><p>保存为autorun.inf</p>
-</li>
-</ul>
-<h3 id="制作"><a href="#制作" class="headerlink" title="制作"></a>制作</h3><ul>
-<li>将图片和刚刚新建的文件移动到U盘的根目录下</li>
-<li>如果想彻底隐藏这两个文件可以使用attrib命令<a href="https://blog.csdn.net/whatday/article/details/52752555" target="_blank" rel="noopener">使用方法</a></li>
-</ul>
-<p>### </p>
-
+                <h1 id="Emacs-常用快捷键"><a href="#Emacs-常用快捷键" class="headerlink" title="Emacs 常用快捷键"></a>Emacs 常用快捷键</h1><h3 id="基本命令"><a href="#基本命令" class="headerlink" title="基本命令"></a>基本命令</h3><pre><code>C-x C-f     打开/新建文件
+C-x C-s     保存当前缓冲区(文件)
+C-x C-w     当前缓冲区另存为
+C-x C-v     关闭当前Buffer并打开新文件
+C-x i       光标处插入文件
+C-x b       切换Buffer
+C-x C-b     显示Buffer列表
+C-x k       关闭当前Buffer
+C-x C-c     关闭Emacs
+C-c C-z     终止shell中的进程</code></pre><h3 id="窗口命令"><a href="#窗口命令" class="headerlink" title="窗口命令"></a>窗口命令</h3><pre><code>C-x 2       水平分割窗格
+C-x 3       垂直分割窗格
+C-x 0       关闭当前窗口
+C-x o       切换窗口
+C-x 1       关闭其他窗口
+C-x 5 2     新建窗口
+C-x 5 f     新窗口中打开文件</code></pre><h3 id="光标移动命令"><a href="#光标移动命令" class="headerlink" title="光标移动命令"></a>光标移动命令</h3><pre><code>C-f         前进一个字符
+C-b         后退一个字符
+C-p         上一行
+C-n         下一行
+M-f         前进一个单词
+M-b         后退一个单词
+C-a         行首
+C-e         行尾
+C-v         下翻一页
+M-v         上翻一页
+M-&lt;         文件头
+M-&gt;         文件尾</code></pre><h3 id="编辑命令"><a href="#编辑命令" class="headerlink" title="编辑命令"></a>编辑命令</h3><pre><code>C-Space            设置开始标记
+C-@                设置开始标记(C-space可能被操作系统拦截)
+C-w                剪切标记区内容
+M-w                复制标记区内容
+C-y                帖粘
+M-u                使光标处的单词大写
+M-l                使光标处的单词小写
+M-c                使光标处单词首字母大写
+C-k                删除一行
+C-x h           全选</code></pre><h3 id="搜索-替换命令"><a href="#搜索-替换命令" class="headerlink" title="搜索/替换命令"></a>搜索/替换命令</h3><pre><code>C-s          向下搜索
+C-r          向上搜索
+M-%          替换
+-              space/y              替换当前匹配
+-              Del/n                不要替换当前匹配
+-              .                    仅替换当前匹配并退出
+-              ,                    替换并暂停(按space或y继续)
+-              !                    替换所有匹配
+-              ^                    回到上一个匹配位置
+-              return/q             退出替换</code></pre><h3 id="撤销命令（undo-tree-模式的使用）"><a href="#撤销命令（undo-tree-模式的使用）" class="headerlink" title="撤销命令（undo tree 模式的使用）"></a>撤销命令（undo tree 模式的使用）</h3><pre><code>C-/           撤销一步
+C-x u         撤销操作进入undo-tree-visualizer-mode
+p n           上下移动，
+b f           在分支之前，左右切换
+t             显示时间戳
+q             退出</code></pre>
                 <hr>
                 <div>
                     <p>
