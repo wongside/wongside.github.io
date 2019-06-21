@@ -19,7 +19,7 @@
     <meta name="description" content>
     <meta name="author" content="Side">
     <meta name="keywords" content>
-    <title>Hello World ~ Side</title>
+    <title>搭建优雅得Hexo博客 ~ Side</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.2/css/all.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.7.4/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.7.4/css/mdb.min.css">
@@ -67,10 +67,10 @@
     <div class="full-bg-img">
         <div class="mask rgba-black-light flex-center">
         <div class="container text-center white-text wow fadeInUp">
-            <p class="h2">Hello World</p>
+            <p class="h2">搭建优雅得Hexo博客</p>
             <br>
             
-            <p>星期五, 六月 21日 2019, 4:05 凌晨</p>
+            <p>星期四, 六月 20日 2019, 1:30 下午</p>
             
         </div>
         </div>
@@ -84,15 +84,29 @@
     <div class="row">
         <div class="col-md-8 offset-md-2 ">
             <div class="post-content py-5 z-depth-3 main">
-                <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre><code class="bash">$ hexo new &quot;My New Post&quot;</code></pre>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre><code class="bash">$ hexo server</code></pre>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre><code class="bash">$ hexo generate</code></pre>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre><code class="bash">$ hexo deploy</code></pre>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+                <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p> Hexo虽然可以搭建好看的博客，但起写作方式过于复杂，必须要安装node.js等软件通过命令行发布。为了简化写作流程，使用TravisCI进行自动化部署，在写博客时完全不需要其他环境，只需要git和markdown工具即可，甚至可以直接在github平台上编写。</p>
+<h3 id="写作环境"><a href="#写作环境" class="headerlink" title="写作环境"></a>写作环境</h3><ul>
+<li>github Desktop，也可以使用命令行的方式，但是在写作时，使用图形界面操作更方便</li>
+<li>Typora，markdown编辑器，十分简洁，也可以直接使用记事本</li>
+<li>如果你嫌麻烦，也可以不用任何软件，直接在github网站上写</li>
+</ul>
+<h3 id="搭建过程"><a href="#搭建过程" class="headerlink" title="搭建过程"></a>搭建过程</h3><h4 id="博客仓库创建"><a href="#博客仓库创建" class="headerlink" title="博客仓库创建"></a>博客仓库创建</h4><p>在github上创建一个<code>youUserName.github.io</code>的仓库，用于存放由Hexo 生成的最终html文件，这样就只能创建一个，也可以通过代码仓库的首页来创建，这样一个账号可以同时运行多个博客。</p>
+<h4 id="博文仓库创建"><a href="#博文仓库创建" class="headerlink" title="博文仓库创建"></a>博文仓库创建</h4><p>在github上创建一个仓库，名称任意，我这里创建为<code>Blog</code>，用于存放md文件格式的博文和相关的配置文件。也可以通过在博客仓库上建立分支的方式，但是个人不喜欢这种方式。</p>
+<p>将仓库克隆到本地，然后增加一个<code>.travis.yml</code>配置文件，如下</p>
+<pre><code class="yaml"></code></pre>
+<p>设置好TravisCI自动部署</p>
+<h4 id="博客生成仓库创建"><a href="#博客生成仓库创建" class="headerlink" title="博客生成仓库创建"></a>博客生成仓库创建</h4><p>可直接fork我的仓库，然后自行修改，那么下面的步骤可以直接跳过。若要自己创建，下面是创建方法</p>
+<p>在github上创建创建一个仓库，用于存放博客配置和主题等文件。拉到本地</p>
+<p>首先安装下列应用程序</p>
+<ul>
+<li>Node.js</li>
+<li>Git</li>
+</ul>
+<p>安装Hexo</p>
+<pre><code class="sh">$ npm install -g hexo-cli</code></pre>
+<p>初始化hexo目录</p>
+<pre><code class="shell">$ hexo init Hexo-generate-blog</code></pre>
+<p>安装一个主题，并且修改配置文件</p>
 
                 <hr>
                 <div>
