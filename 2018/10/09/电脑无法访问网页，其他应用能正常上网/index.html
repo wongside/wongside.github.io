@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+
+
+
+
+
+
+
+
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content>
+    <meta name="author" content="Side">
+    <meta name="keywords" content>
+    <title>电脑无法访问网页，其他应用能正常上网 ~ Side</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.2/css/all.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.7.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.7.4/css/mdb.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_1067060_vr10bjtg3us.css">
+    
+        <link rel="stylesheet" href="/css/Prettify/github.min.css">
+    
+</head>
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+<div class="container">
+    <a class="navbar-brand" href="/"><strong>Side</strong></a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto text-center">
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/">Home</a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/archives/">Archives</a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/about/">About</a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+</nav>
+    <div class="view intro-2" style='background: url("/img/post_img.jpg")no-repeat center center;background-size: cover;'>
+    <div class="full-bg-img">
+        <div class="mask rgba-black-light flex-center">
+        <div class="container text-center white-text wow fadeInUp">
+            <p class="h2">电脑无法访问网页，其他应用能正常上网</p>
+            <br>
+            
+            <p>星期二, 十月 9日 2018, 12:59 下午</p>
+            
+        </div>
+        </div>
+    </div>
+    </div>
+  </header>
+
+  <main>
+  
+  <div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8 offset-md-2 ">
+            <div class="post-content py-5 z-depth-3 main">
+                <blockquote>
+<p>电脑网络情况</p>
+<p>​    电脑使用过蓝灯时，发现没法联网，就将蓝灯强制退出，导致电脑的网络出现异常。具体情况表现为qq能上网，360能下载软件。总体来说就是只要跟网页有关的都不正常，跟网页无关就可以上网，比如爱奇艺，可以看视频，但是旁边的栏目没法看，显示错误。</p>
+<p>​    后面又发现了更诡异的是火狐可以上网，其他的浏览器基本不行（测试了IE，360浏览器，谷歌浏览器），并且360显示网络设置正常，后又发现wifi可以上网，网线不行。</p>
+</blockquote>
+<h3 id="使用网上常见的方法解决，失败"><a href="#使用网上常见的方法解决，失败" class="headerlink" title="使用网上常见的方法解决，失败"></a>使用网上常见的方法解决，失败</h3><p>​    首先想到的就是百度，在百度上搜索了各种解决这种情况的方法，但是经过几个小时的折腾网络依然如此，没有得到解决。</p>
+<h3 id="使用360修复，失败"><a href="#使用360修复，失败" class="headerlink" title="使用360修复，失败"></a>使用360修复，失败</h3><p>​    本想自己在网上看看是什么原因，不仅修复网络，还可以增长知识，但是花了大量的时间也没有成功，这时不得不使用360修复了，360显示所有的网络设置都是正常的，但是测试显示异常，反复尝试360依然没法修复这个问题。显示正常，但是又没有办法可以上网，越来越迷了。</p>
+<h3 id="自己想办法修复，失败"><a href="#自己想办法修复，失败" class="headerlink" title="自己想办法修复，失败"></a>自己想办法修复，失败</h3><p>​    360都没法修复，就只有自己想想办法了。首先就是重装驱动，重装驱动的时候偶然连到寝室wifi，发现wifi居然能上网，但是网线不行，本以为装完驱动应该就没事了，结果还是一样。然后就用ping命令来测试网络，ping了本机，内网，外网都能ping通。因为是网页不能访问所以想到了http协议，然后查了所有的端口使用情况，看看是不是有什么应用在占用了80端口，结果依然是无法访问网络。在绝望之际想到了试一下其他的浏览器，试了多个浏览器后，发现居然火狐能用，但是依然不肯罢休，毕竟很多应用都有异常。</p>
+<h3 id="重装蓝灯，找到原因"><a href="#重装蓝灯，找到原因" class="headerlink" title="重装蓝灯，找到原因"></a>重装蓝灯，找到原因</h3><p>​    本想重装系统了，但是想到既然是蓝灯惹的问题，可不可以让他自己来修复，反正都要重装系统了也不差这一会。重装蓝灯之后，发现网能用了，但是一旦停止蓝灯，就又不行了。忽然觉得发现了什么，一百度就明白了，早知道是蓝灯惹的祸也不用浪费这么多的时间了。</p>
+<h3 id="解决方法的链接"><a href="#解决方法的链接" class="headerlink" title="解决方法的链接"></a>解决方法的链接</h3><p><a href="https://jingyan.baidu.com/article/86fae346c0f3193c49121aeb.html?qq-pf-to=pcqq.c2c" target="_blank" rel="noopener">关闭蓝灯/Lantern后无法连接到网络</a></p>
+<p>​    </p>
+
+                <hr>
+                <div>
+                    <p>
+                        
+                    </p>
+                </div>
+                <br>
+                
+                    <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+                
+            </div>
+        </div>
+        <div class="d-none d-md-block col-md-2">
+            
+  <div id="toc" class="py-5">
+    <p class="h6"><i class="iconfont icon-toc" style="vertical-align:middle"></i> Toc:</p> 
+    <div id="tocbot"></div>
+  </div>
+
+        </div>
+    </div>        
+</div>
+
+<br><br><br>
+
+<!-- Comments -->
+<div class="comments" id="comments">
+ 
+</div>
+  
+  </main>
+
+<footer class="mt-5">
+  <div class="text-center py-3">
+    <a href="https://hexo.io" target="_blank"><b>HEXO</b></a>
+    <i class="iconfont icon-love"></i>
+    <a href="https://github.com/0x2e/Material-T" target="_blank"> <b>Material-T</b></a>
+  </div>
+</footer>
+
+  <!-- SCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.7.4/js/jquery-3.3.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.7.4/js/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.7.4/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.7.4/js/mdb.min.js"></script>
+  <script src="/js/main.js"></script>
+  
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
+    
+    <script src="/js/post.js"></script>
+    
+      <script src="/js/plugins/prettify.js"></script>
+      <script>
+          $(document).ready(function(){
+              $('pre').addClass('prettyprint linenums');
+              prettyPrint();
+          })
+      </script>
+    
+  
+</body>
+</html>
