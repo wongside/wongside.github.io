@@ -19,17 +19,19 @@
     <meta name="description" content>
     <meta name="author" content="Side">
     <meta name="keywords" content>
-    <title>Archive ~ Side</title>
+    <title>Side</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.2/css/all.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.7.4/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.7.4/css/mdb.min.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="https://at.alicdn.com/t/font_1067060_vr10bjtg3us.css">
     
+        <link rel="stylesheet" href="/css/Prettify/github.min.css">
+    
 </head>
 
 <body>
-  <header style="height: 80vh;">
+  <header style="height: 70vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
 <div class="container">
     <a class="navbar-brand" href="/"><strong>Side</strong></a>
@@ -61,12 +63,14 @@
 
 
 </nav>
-    <div class="view intro-2" style='background: url("/img/archive_img.jpg")no-repeat center center;background-size: cover;'>
+    <div class="view intro-2" style='background: url("/img/post_img.jpg")no-repeat center center;background-size: cover;'>
     <div class="full-bg-img">
         <div class="mask rgba-black-light flex-center">
         <div class="container text-center white-text wow fadeInUp">
-            <p class="h2">Archive</p>
+            <p class="h2"></p>
             <br>
+            
+            <p>星期日, 十一月 21日 2021, 4:32 下午</p>
             
         </div>
         </div>
@@ -75,92 +79,46 @@
   </header>
 
   <main>
-    
-  <div class="container">
-    <div class="py-5 z-depth-3 main">
-      
-      <div class="container">
-        <div class="row">
-          <div class="col-10 offset-1">
-            
+  
+  <div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8 offset-md-2 ">
+            <div class="post-content py-5 z-depth-3 main">
+                <h1 id="Use-proxy-on-ubuntu"><a href="#Use-proxy-on-ubuntu" class="headerlink" title="Use proxy on ubuntu"></a>Use proxy on ubuntu</h1><h3 id="install-proxychains4"><a href="#install-proxychains4" class="headerlink" title="install proxychains4"></a>install proxychains4</h3><pre><code class="shell">sudo apt install proxychains4</code></pre>
+<h3 id="config"><a href="#config" class="headerlink" title="config"></a>config</h3><pre><code class="shell">sudo emacs /etc/proxychains4.conf
+# add proxy server in the last line
+# sock5 192.168.192.1 1080</code></pre>
+<h3 id="Test-use-proxy"><a href="#Test-use-proxy" class="headerlink" title="Test use proxy"></a>Test use proxy</h3><pre><code class="shell">proxychains wget google.com</code></pre>
 
-    
-        
-            
-        
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-
-
-
-<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-<li class="nav-item mr-2">
-    <a class="nav-link active" id="pills-All-tab" data-toggle="pill" href="#pills-All" role="tab"
-    aria-controls="pills-home" aria-selected="true">ALL</a>
-</li>
-
-<li class="nav-item mr-2">
-    <a class="nav-link" id="pills-ckw8zfkko0003hln86rmpn8p5-tab" data-toggle="pill" href="#pills-ckw8zfkko0003hln86rmpn8p5" role="tab"
-    aria-controls="pills-ckw8zfkko0003hln86rmpn8p5" aria-selected="false">工具</a>
-</li>
-
-</ul>
-<div class="tab-content pt-2 pl-1" id="pills-tabContent">
-    <div class="tab-pane fade show active" id="pills-All" role="tabpanel" aria-labelledby="pills-all-tab">
-        <p>Total: 7</p>
-        <hr>
-        
-            
+                <hr>
+                <div>
+                    <p>
+                        
+                    </p>
+                </div>
+                <br>
                 
-                    
-                    
-                    <p class="h5">2021</p>
-                    <div class="list-group">
+                    <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
                 
-                <a href="/2021/11/21/Use proxy on ubuntu/" class="list-group-item list-group-item-action">
-                    <span class="archive-post-title"></span>
-                    <span style="float: right;">11-21</span>
-                </a>
-            
-                
-                <a href="/2021/11/21/hello-world/" class="list-group-item list-group-item-action">
-                    <span class="archive-post-title">Hello World</span>
-                    <span style="float: right;">11-21</span>
-                </a>
-            
-            </div>
-        
-        
-    </div>
-    
-        
-        <div class="tab-pane fade" id="pills-ckw8zfkko0003hln86rmpn8p5" role="tabpanel" aria-labelledby="pills-ckw8zfkko0003hln86rmpn8p5-tab">
-                                            
-                
-                                            
-                
-            
             </div>
         </div>
-    
-</div>
-          </div>
-        </div>
-      </div>
-    </div>
+        <div class="d-none d-md-block col-md-2">
+            
+  <div id="toc" class="py-5">
+    <p class="h6"><i class="iconfont icon-toc" style="vertical-align:middle"></i> Toc:</p> 
+    <div id="tocbot"></div>
   </div>
+
+        </div>
+    </div>        
+</div>
+
+<br><br><br>
+
+<!-- Comments -->
+<div class="comments" id="comments">
+ 
+</div>
   
   </main>
 
@@ -178,6 +136,20 @@
   <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.7.4/js/bootstrap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.7.4/js/mdb.min.js"></script>
   <script src="/js/main.js"></script>
+  
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
+    
+    <script src="/js/post.js"></script>
+    
+      <script src="/js/plugins/prettify.js"></script>
+      <script>
+          $(document).ready(function(){
+              $('pre').addClass('prettyprint linenums');
+              prettyPrint();
+          })
+      </script>
+    
   
 </body>
 </html>
