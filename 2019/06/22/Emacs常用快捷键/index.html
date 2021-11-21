@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+
+
+
+
+
+
+
+
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content>
+    <meta name="author" content="Side">
+    <meta name="keywords" content>
+    <title>Emacs 常用快捷键 ~ Side</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.2/css/all.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.7.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.7.4/css/mdb.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_1067060_vr10bjtg3us.css">
+    
+        <link rel="stylesheet" href="/css/Prettify/github.min.css">
+    
+</head>
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+<div class="container">
+    <a class="navbar-brand" href="/"><strong>Side</strong></a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto text-center">
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/">Home</a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/archives/">Archives</a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/about/">About</a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+</nav>
+    <div class="view intro-2" style='background: url("/img/post_img.jpg")no-repeat center center;background-size: cover;'>
+    <div class="full-bg-img">
+        <div class="mask rgba-black-light flex-center">
+        <div class="container text-center white-text wow fadeInUp">
+            <p class="h2">Emacs 常用快捷键</p>
+            <br>
+            
+            <p>星期六, 六月 22日 2019, 5:00 下午</p>
+            
+        </div>
+        </div>
+    </div>
+    </div>
+  </header>
+
+  <main>
+  
+  <div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8 offset-md-2 ">
+            <div class="post-content py-5 z-depth-3 main">
+                <h3 id="基本命令"><a href="#基本命令" class="headerlink" title="基本命令"></a>基本命令</h3><pre><code>C-x C-f     打开/新建文件
+C-x C-s     保存当前缓冲区(文件)
+C-x C-w     当前缓冲区另存为
+C-x C-v     关闭当前Buffer并打开新文件
+C-x i       光标处插入文件
+C-x b       切换Buffer
+C-x C-b     显示Buffer列表
+C-x k       关闭当前Buffer
+C-x C-c     关闭Emacs
+C-c C-z     终止shell中的进程</code></pre><h3 id="窗口命令"><a href="#窗口命令" class="headerlink" title="窗口命令"></a>窗口命令</h3><pre><code>C-x 2       水平分割窗格
+C-x 3       垂直分割窗格
+C-x 0       关闭当前窗口
+C-x o       切换窗口
+C-x 1       关闭其他窗口
+C-x 5 2     新建窗口
+C-x 5 f     新窗口中打开文件</code></pre><h3 id="光标移动命令"><a href="#光标移动命令" class="headerlink" title="光标移动命令"></a>光标移动命令</h3><pre><code>C-f         前进一个字符
+C-b         后退一个字符
+C-p         上一行
+C-n         下一行
+M-f         前进一个单词
+M-b         后退一个单词
+C-a         行首
+C-e         行尾
+C-v         下翻一页
+M-v         上翻一页
+M-&lt;         文件头
+M-&gt;         文件尾</code></pre><h3 id="编辑命令"><a href="#编辑命令" class="headerlink" title="编辑命令"></a>编辑命令</h3><pre><code>C-Space            设置开始标记
+C-@                设置开始标记(C-space可能被操作系统拦截)
+C-w                剪切标记区内容
+M-w                复制标记区内容
+C-y                帖粘
+M-u                使光标处的单词大写
+M-l                使光标处的单词小写
+M-c                使光标处单词首字母大写
+C-k                删除一行
+C-x h           全选</code></pre><h3 id="搜索-替换命令"><a href="#搜索-替换命令" class="headerlink" title="搜索/替换命令"></a>搜索/替换命令</h3><pre><code>C-s          向下搜索
+C-r          向上搜索
+M-%          替换
+-              space/y              替换当前匹配
+-              Del/n                不要替换当前匹配
+-              .                    仅替换当前匹配并退出
+-              ,                    替换并暂停(按space或y继续)
+-              !                    替换所有匹配
+-              ^                    回到上一个匹配位置
+-              return/q             退出替换</code></pre><h3 id="撤销命令（undo-tree-模式的使用）"><a href="#撤销命令（undo-tree-模式的使用）" class="headerlink" title="撤销命令（undo tree 模式的使用）"></a>撤销命令（undo tree 模式的使用）</h3><pre><code>C-/           撤销一步
+C-x u         撤销操作进入undo-tree-visualizer-mode
+p n           上下移动，
+b f           在分支之前，左右切换
+t             显示时间戳
+q             退出</code></pre>
+                <hr>
+                <div>
+                    <p>
+                         
+                        <span class="badge badge-light">#&nbsp;工具</span>
+                        &nbsp;
+                        
+                    </p>
+                </div>
+                <br>
+                
+                    <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+                
+            </div>
+        </div>
+        <div class="d-none d-md-block col-md-2">
+            
+  <div id="toc" class="py-5">
+    <p class="h6"><i class="iconfont icon-toc" style="vertical-align:middle"></i> Toc:</p> 
+    <div id="tocbot"></div>
+  </div>
+
+        </div>
+    </div>        
+</div>
+
+<br><br><br>
+
+<!-- Comments -->
+<div class="comments" id="comments">
+ 
+</div>
+  
+  </main>
+
+<footer class="mt-5">
+  <div class="text-center py-3">
+    <a href="https://hexo.io" target="_blank"><b>HEXO</b></a>
+    <i class="iconfont icon-love"></i>
+    <a href="https://github.com/0x2e/Material-T" target="_blank"> <b>Material-T</b></a>
+  </div>
+</footer>
+
+  <!-- SCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.7.4/js/jquery-3.3.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.7.4/js/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.7.4/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.7.4/js/mdb.min.js"></script>
+  <script src="/js/main.js"></script>
+  
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
+    
+    <script src="/js/post.js"></script>
+    
+      <script src="/js/plugins/prettify.js"></script>
+      <script>
+          $(document).ready(function(){
+              $('pre').addClass('prettyprint linenums');
+              prettyPrint();
+          })
+      </script>
+    
+  
+</body>
+</html>
