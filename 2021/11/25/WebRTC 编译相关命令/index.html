@@ -26,10 +26,12 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="https://at.alicdn.com/t/font_1067060_vr10bjtg3us.css">
     
+        <link rel="stylesheet" href="/css/Prettify/github.min.css">
+    
 </head>
 
 <body>
-  <header style="height: 100vh;">
+  <header style="height: 70vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
 <div class="container">
     <a class="navbar-brand" href="/"><strong>Side</strong></a>
@@ -61,12 +63,14 @@
 
 
 </nav>
-    <div class="view intro-2" style='background: url("/img/home_img.jpg")no-repeat center center;background-size: cover;'>
+    <div class="view intro-2" style='background: url("/img/post_img.jpg")no-repeat center center;background-size: cover;'>
     <div class="full-bg-img">
         <div class="mask rgba-black-light flex-center">
         <div class="container text-center white-text wow fadeInUp">
             <p class="h2"></p>
             <br>
+            
+            <p>星期四, 十一月 25日 2021, 1:06 下午</p>
             
         </div>
         </div>
@@ -75,126 +79,59 @@
   </header>
 
   <main>
-    
-  <div class="container">
-    <div class="py-5 z-depth-3 main">
-      
-      <div class="container">
-        <div class="row">
-          <div class="col-10 offset-1">
-            
+  
+  <div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8 offset-md-2 ">
+            <div class="post-content py-5 z-depth-3 main">
+                <h1 id="WebRTC-编译相关命令"><a href="#WebRTC-编译相关命令" class="headerlink" title="WebRTC 编译相关命令"></a>WebRTC 编译相关命令</h1><p>设置boto文件路劲</p>
+<pre><code class="shell">export NO_AUTH_BOTO_CONFIG=/home/side/.boto</code></pre>
+<p>设置depot_tools环境变量</p>
+<pre><code class="shell">export PATH=/home/side/Documents/own-webrtc/depot_tools:$PATH</code></pre>
+<p>生成 ninja 构建文件</p>
+<pre><code class="shell">gn gen out/linux_debug_x64/ --args=&#39;target_os=&quot;linux&quot; target_cpu=&quot;x64&quot; is_debug=true&#39;</code></pre>
+<p>编译 WebRTC</p>
+<pre><code class="shell">ninja -C out/linux_release_x64/ webrtc</code></pre>
+<p>提取头文件</p>
+<pre><code class="shell">cd src
+rm ~/Downloads/webrtc-lib/include &amp;&amp; \
+mkdir -p ~/Downloads/webrtc-lib/include &amp;&amp; \
+find . -maxdepth 1 -name &quot;*.h&quot; -exec cp --parents &#39;{}&#39; ~/Downloads/webrtc-lib/include &#39;;&#39; &amp;&amp; \
+find api audio base call common_audio common_video \
+    logging media modules p2p pc rtc_base rtc_tools \
+    sdk stats system_wrappers third_party/abseil-cpp \
+    video third_party/abseil-cpp -name &quot;*.h&quot; \
+    -exec cp --parents &#39;{}&#39; ~/Downloads/webrtc-lib/include &#39;;&#39;</code></pre>
 
-    
-        
-            
-        
-    
-
-    
-
-    
-        
-            
-        
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-
-
-
-<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-<li class="nav-item mr-2">
-    <a class="nav-link active" id="pills-All-tab" data-toggle="pill" href="#pills-All" role="tab"
-    aria-controls="pills-home" aria-selected="true">ALL</a>
-</li>
-
-<li class="nav-item mr-2">
-    <a class="nav-link" id="pills-ckwehu1tl0003d5od6qfjvuxp-tab" data-toggle="pill" href="#pills-ckwehu1tl0003d5od6qfjvuxp" role="tab"
-    aria-controls="pills-ckwehu1tl0003d5od6qfjvuxp" aria-selected="false">工具</a>
-</li>
-
-<li class="nav-item mr-2">
-    <a class="nav-link" id="pills-ckwehu1tr0007d5odfzesfbdq-tab" data-toggle="pill" href="#pills-ckwehu1tr0007d5odfzesfbdq" role="tab"
-    aria-controls="pills-ckwehu1tr0007d5odfzesfbdq" aria-selected="false">ubuntu</a>
-</li>
-
-</ul>
-<div class="tab-content pt-2 pl-1" id="pills-tabContent">
-    <div class="tab-pane fade show active" id="pills-All" role="tabpanel" aria-labelledby="pills-all-tab">
-        <p>Total: 12</p>
-        <hr>
-        
-            
-                
-                    
-                    
-                    <p class="h5">2019</p>
-                    <div class="list-group">
-                
-                <a href="/2019/06/22/Emacs常用快捷键/" class="list-group-item list-group-item-action">
-                    <span class="archive-post-title">Emacs 常用快捷键</span>
-                    <span style="float: right;">06-22</span>
-                </a>
-            
-            </div>
-        
-        
-    </div>
-    
-        
-        <div class="tab-pane fade" id="pills-ckwehu1tl0003d5od6qfjvuxp" role="tabpanel" aria-labelledby="pills-ckwehu1tl0003d5od6qfjvuxp-tab">
-                                            
-                
-                    
+                <hr>
+                <div>
+                    <p>
                         
-                            
-                            
-                            <p class="h5">2019</p>
-                            <div class="list-group">
-                        
-                        <a href="/2019/06/22/Emacs常用快捷键/" class="list-group-item list-group-item-action">
-                            <span class="archive-post-title">Emacs 常用快捷键</span>
-                            <span style="float: right;">06-22</span>
-                        </a>
-                    
+                    </p>
+                </div>
+                <br>
                 
-            
+                    <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+                
             </div>
         </div>
-    
-        
-        <div class="tab-pane fade" id="pills-ckwehu1tr0007d5odfzesfbdq" role="tabpanel" aria-labelledby="pills-ckwehu1tr0007d5odfzesfbdq-tab">
-                                            
-                
-                    
-                
+        <div class="d-none d-md-block col-md-2">
             
-            </div>
-        </div>
-    
-</div>
-          </div>
-        </div>
-      </div>
-    </div>
+  <div id="toc" class="py-5">
+    <p class="h6"><i class="iconfont icon-toc" style="vertical-align:middle"></i> Toc:</p> 
+    <div id="tocbot"></div>
   </div>
+
+        </div>
+    </div>        
+</div>
+
+<br><br><br>
+
+<!-- Comments -->
+<div class="comments" id="comments">
+ 
+</div>
   
   </main>
 
@@ -212,6 +149,20 @@
   <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.7.4/js/bootstrap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.7.4/js/mdb.min.js"></script>
   <script src="/js/main.js"></script>
+  
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
+    
+    <script src="/js/post.js"></script>
+    
+      <script src="/js/plugins/prettify.js"></script>
+      <script>
+          $(document).ready(function(){
+              $('pre').addClass('prettyprint linenums');
+              prettyPrint();
+          })
+      </script>
+    
   
 </body>
 </html>

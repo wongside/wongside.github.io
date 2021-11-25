@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+
+
+
+
+
+
+
+
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content>
+    <meta name="author" content="Side">
+    <meta name="keywords" content>
+    <title>Side</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/5.7.2/css/all.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.7.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.7.4/css/mdb.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_1067060_vr10bjtg3us.css">
+    
+        <link rel="stylesheet" href="/css/Prettify/github.min.css">
+    
+</head>
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+<div class="container">
+    <a class="navbar-brand" href="/"><strong>Side</strong></a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto text-center">
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/">Home</a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/archives/">Archives</a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/about/">About</a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+</nav>
+    <div class="view intro-2" style='background: url("/img/post_img.jpg")no-repeat center center;background-size: cover;'>
+    <div class="full-bg-img">
+        <div class="mask rgba-black-light flex-center">
+        <div class="container text-center white-text wow fadeInUp">
+            <p class="h2"></p>
+            <br>
+            
+            <p>星期四, 十一月 25日 2021, 1:06 下午</p>
+            
+        </div>
+        </div>
+    </div>
+    </div>
+  </header>
+
+  <main>
+  
+  <div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8 offset-md-2 ">
+            <div class="post-content py-5 z-depth-3 main">
+                <h1 id="树莓派安装-Ubuntu-Server-20-及网络配置"><a href="#树莓派安装-Ubuntu-Server-20-及网络配置" class="headerlink" title="树莓派安装 Ubuntu Server 20 及网络配置"></a>树莓派安装 Ubuntu Server 20 及网络配置</h1><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>第一种方法，推荐使用该方法。直接使用树莓派官网提供的Raspberry Pi Imager安装。</p>
+<p>第二种方法，到树莓派官网下载系统镜像，然后使用Win32 Disk Imager安装。</p>
+<p>两种方法的操作比较简单，选择好系统和磁盘直接点击下一步即可。</p>
+<ul>
+<li><p>树莓派系统和工具 <a href="https://www.raspberrypi.org/downloads/" target="_blank" rel="noopener">下载页面</a></p>
+</li>
+<li><p>Win32 Disk Imager <a href="https://sourceforge.net/projects/win32diskimager/" target="_blank" rel="noopener">下载页面</a></p>
+</li>
+</ul>
+<h6 id="Ubuntu-Server-20-默认用户名和密码"><a href="#Ubuntu-Server-20-默认用户名和密码" class="headerlink" title="Ubuntu Server 20 默认用户名和密码"></a>Ubuntu Server 20 默认用户名和密码</h6><ul>
+<li>用户名:<code>ubuntu</code></li>
+<li>密码: <code>ubuntu</code></li>
+</ul>
+<h3 id="网络配置"><a href="#网络配置" class="headerlink" title="网络配置"></a>网络配置</h3><p>在没有显示器的情况下，树莓派可以通过网线连接，然后在路由器上查看树莓派的IP，然后使用ssh连接到树莓派。</p>
+<p>如果没有网线可以在SD卡中配置WIFI名和密码，通过WIFI连接。</p>
+<h4 id="WIFI配置方法"><a href="#WIFI配置方法" class="headerlink" title="WIFI配置方法"></a>WIFI配置方法</h4><p>打开SD卡根目录下的network-config文件，</p>
+<p>在文件最后添加</p>
+<pre><code class="yaml">wifis:
+  wlan0:
+    dhcp4: true
+    optional: true
+    access-points:
+      &quot;WIFI名称&quot;:
+        password: &quot;WIFI密码&quot;</code></pre>
+<p>待树莓派启动后，等待一两分钟，然后<strong>重启树莓派</strong>就能连接到WIFI了。</p>
+<p><strong>该配置只在树莓派安装系统后第一次修改有效</strong></p>
+<h4 id="查看树莓派IP地址"><a href="#查看树莓派IP地址" class="headerlink" title="查看树莓派IP地址"></a>查看树莓派IP地址</h4><ul>
+<li><p>可以直接登录路由器查看</p>
+</li>
+<li><p>或者使用<code>arp</code>命令查看</p>
+<pre><code class="shell">arp -a | findstr b8-27-eb # Windows 树莓派3
+arp -a | findstr dc-a6-32 # Windows 树莓派4
+arp -na | grep -i &quot;b8:27:eb&quot; # Linux 树莓派3
+arp -na | grep -i &quot;dc:a6:32&quot; # Linux 树莓派4</code></pre>
+</li>
+<li><p>进入系统后, 查看树莓派IP地址</p>
+</li>
+</ul>
+<pre><code class="shell">ip a</code></pre>
+<h4 id="进入系统后连接WIFI"><a href="#进入系统后连接WIFI" class="headerlink" title="进入系统后连接WIFI"></a>进入系统后连接WIFI</h4><p>第一步, 查看无线网卡名称</p>
+<pre><code class="shell">ls /sys/class/net</code></pre>
+<p>第二步, 修改网络配置</p>
+<pre><code class="shell">sudo nano /etc/netplan/50-cloud-init.yaml
+#将下面的内容添加到文件末尾
+    wifis:
+        wlan0:
+            optional: true
+            access-points:
+                &quot;SSID-NAME-HERE&quot;:
+                    password: &quot;PASSWORD-HERE&quot;
+            dhcp4: true</code></pre>
+<p>第三步, 应用网络配置</p>
+<pre><code class="shell">sudo netplan apply</code></pre>
+<h4 id="配置静态IP"><a href="#配置静态IP" class="headerlink" title="配置静态IP"></a>配置静态IP</h4><p>第一步, 禁用cloud-init自动IP</p>
+<pre><code class="shell">sudo nano /etc/cloud/cloud.cfg.d/subiquity-disable-cloudinit-networking.cfg
+# 在其后添加
+network: {config: disabled}</code></pre>
+<p>第二步, 修改配置,如下所示</p>
+<pre><code class="shell">    wifis:
+        wlan0:
+            addresses: [192.168.1.200/24]
+            gateway4: 192.168.1.1
+            nameservers:
+                addresses: [114.114.114.114, 114.114.115.115]
+            access-points:
+                &quot;wifi name&quot;:
+                    password: &quot;password&quot;
+            optional: true</code></pre>
+<p>第三步, 应用更改</p>
+<pre><code class="shell">sudo netplan apply</code></pre>
+<h4 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h4><p>安装系统: <a href="https://ubuntu.com/tutorials/how-to-install-ubuntu-on-your-raspberry-pi#4-boot-ubuntu-server" target="_blank" rel="noopener">https://ubuntu.com/tutorials/how-to-install-ubuntu-on-your-raspberry-pi#4-boot-ubuntu-server</a></p>
+<p>连接WIFI: <a href="https://linuxconfig.org/ubuntu-20-04-connect-to-wifi-from-command-line" target="_blank" rel="noopener">https://linuxconfig.org/ubuntu-20-04-connect-to-wifi-from-command-line</a></p>
+<p>配置静态IP: <a href="https://www.linuxtechi.com/assign-static-ip-address-ubuntu-20-04-lts/" target="_blank" rel="noopener">https://www.linuxtechi.com/assign-static-ip-address-ubuntu-20-04-lts/</a></p>
+
+                <hr>
+                <div>
+                    <p>
+                        
+                    </p>
+                </div>
+                <br>
+                
+                    <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+                
+            </div>
+        </div>
+        <div class="d-none d-md-block col-md-2">
+            
+  <div id="toc" class="py-5">
+    <p class="h6"><i class="iconfont icon-toc" style="vertical-align:middle"></i> Toc:</p> 
+    <div id="tocbot"></div>
+  </div>
+
+        </div>
+    </div>        
+</div>
+
+<br><br><br>
+
+<!-- Comments -->
+<div class="comments" id="comments">
+ 
+</div>
+  
+  </main>
+
+<footer class="mt-5">
+  <div class="text-center py-3">
+    <a href="https://hexo.io" target="_blank"><b>HEXO</b></a>
+    <i class="iconfont icon-love"></i>
+    <a href="https://github.com/0x2e/Material-T" target="_blank"> <b>Material-T</b></a>
+  </div>
+</footer>
+
+  <!-- SCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.7.4/js/jquery-3.3.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.7.4/js/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.7.4/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.7.4/js/mdb.min.js"></script>
+  <script src="/js/main.js"></script>
+  
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
+    
+    <script src="/js/post.js"></script>
+    
+      <script src="/js/plugins/prettify.js"></script>
+      <script>
+          $(document).ready(function(){
+              $('pre').addClass('prettyprint linenums');
+              prettyPrint();
+          })
+      </script>
+    
+  
+</body>
+</html>

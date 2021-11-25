@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+
+
+
+
+
+
+
+
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content>
+    <meta name="author" content="Side">
+    <meta name="keywords" content>
+    <title>Side</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/5.7.2/css/all.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.7.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.7.4/css/mdb.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_1067060_vr10bjtg3us.css">
+    
+        <link rel="stylesheet" href="/css/Prettify/github.min.css">
+    
+</head>
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+<div class="container">
+    <a class="navbar-brand" href="/"><strong>Side</strong></a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto text-center">
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/">Home</a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/archives/">Archives</a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/about/">About</a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+</nav>
+    <div class="view intro-2" style='background: url("/img/post_img.jpg")no-repeat center center;background-size: cover;'>
+    <div class="full-bg-img">
+        <div class="mask rgba-black-light flex-center">
+        <div class="container text-center white-text wow fadeInUp">
+            <p class="h2"></p>
+            <br>
+            
+            <p>星期四, 十一月 25日 2021, 1:06 下午</p>
+            
+        </div>
+        </div>
+    </div>
+    </div>
+  </header>
+
+  <main>
+  
+  <div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8 offset-md-2 ">
+            <div class="post-content py-5 z-depth-3 main">
+                <h1 id="shell学习"><a href="#shell学习" class="headerlink" title="shell学习"></a>shell学习</h1><ul>
+<li>shell比较快</li>
+<li>Linux上都有，换平台也能使用</li>
+<li>系统默认的都是bash</li>
+</ul>
+<h3 id="bash的功能"><a href="#bash的功能" class="headerlink" title="bash的功能"></a>bash的功能</h3><p>兼容于sh，并在此基础上做了加强</p>
+<ul>
+<li>历史记录，在<code>~/.bash_history</code>,只记录了上一次登录的命令，当前的缓存在内存中</li>
+<li>命令补全，使用tab键补全，可以安装<code>bash-completion</code>可以进行参数和选项的补全</li>
+<li>命令别名，<code>alias</code>可以查看bash环境中的别名</li>
+<li>任务管理，控制程序的前台后台执行</li>
+<li>程序化脚本，即shell脚本</li>
+<li>通配符，<code>? *</code>等等</li>
+</ul>
+<h3 id="type查看是否为bash中的命令"><a href="#type查看是否为bash中的命令" class="headerlink" title="type查看是否为bash中的命令"></a>type查看是否为bash中的命令</h3><pre><code class="shell">type cd # 查看cd命令是否是bash内置的</code></pre>
+<p>type可以用于查找命令</p>
+<ul>
+<li><code>\</code>让命令可以在下一行继续输入</li>
+<li><code>ctrl + u</code> <code>ctrl + k</code> <code>ctrl + a</code> <code>ctrl + e</code>分别为向前删除，向后删除，移动到最前面，移动到最后</li>
+</ul>
+<h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><ul>
+<li>环境变量通常是大写字母，例如 PATH， MAIL ， HOME</li>
+<li>echo $variable 可以输出变量的值，例如，echo $PATH</li>
+<li>更好的使用变量的方式是，echo ${variable}</li>
+<li>myname=side 设置变量，变量的规则见书上319页</li>
+<li>export 可以将自己定义的变量变成环境变量</li>
+<li>unset 可以取消变量 </li>
+<li>cd /lib/modules/$(uname -r)/kernel 进入到目前内核模块的目录</li>
+<li>每个Linux都能够有多个内核</li>
+<li>`反单引号里的命令会被先执行，其输出作为命令的输入 ``</li>
+</ul>
+
+                <hr>
+                <div>
+                    <p>
+                        
+                    </p>
+                </div>
+                <br>
+                
+                    <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+                
+            </div>
+        </div>
+        <div class="d-none d-md-block col-md-2">
+            
+  <div id="toc" class="py-5">
+    <p class="h6"><i class="iconfont icon-toc" style="vertical-align:middle"></i> Toc:</p> 
+    <div id="tocbot"></div>
+  </div>
+
+        </div>
+    </div>        
+</div>
+
+<br><br><br>
+
+<!-- Comments -->
+<div class="comments" id="comments">
+ 
+</div>
+  
+  </main>
+
+<footer class="mt-5">
+  <div class="text-center py-3">
+    <a href="https://hexo.io" target="_blank"><b>HEXO</b></a>
+    <i class="iconfont icon-love"></i>
+    <a href="https://github.com/0x2e/Material-T" target="_blank"> <b>Material-T</b></a>
+  </div>
+</footer>
+
+  <!-- SCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.7.4/js/jquery-3.3.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.7.4/js/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.7.4/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.7.4/js/mdb.min.js"></script>
+  <script src="/js/main.js"></script>
+  
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
+    
+    <script src="/js/post.js"></script>
+    
+      <script src="/js/plugins/prettify.js"></script>
+      <script>
+          $(document).ready(function(){
+              $('pre').addClass('prettyprint linenums');
+              prettyPrint();
+          })
+      </script>
+    
+  
+</body>
+</html>
